@@ -26,14 +26,14 @@
         input[type="text"], input[type="date"] { width: 100%; padding: 11px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
         input:focus { outline: none; border-color: #005eb8; box-shadow: 0 0 5px rgba(0, 94, 184, 0.2); }
         
-        .btn-submit { width: 100%; background-color: #005eb8; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px; transition: 0.2s; }
+        .btn-submit { width: 100%; background-color: #335175; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 25px; transition: 0.2s; }
         .btn-submit:hover { background-color: #004488; }
         
         /* 🔄 ৫ সেকেন্ডের প্রসেসিং লোডার */
         .loader-box { display: none; text-align: center; padding: 30px 10px; }
-        .spinner { border: 4px solid rgba(0, 0, 0, 0.1); width: 45px; height: 45px; border-radius: 50%; border-left-color: #00A36C; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
+        .spinner { border: 4px solid rgba(0, 0, 0, 0.1); width: 45px; height: 45px; border-radius: 50%; border-left-color: #05731D; animation: spin 1s linear infinite; margin: 0 auto 20px auto; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .loader-box p { font-size: 15px; color: #005eb8; font-weight: bold; }
+        .loader-box p { font-size: 15px; color: #0F4380; font-weight: bold; }
 
         /* 📄 রেজাল্ট বক্স */
         .results-box { border-top: 2px solid #FFFFFF; margin-top: 25px; padding-top: 15px; background: #fafafa; padding: 15px; border-radius: 6px; }
@@ -47,9 +47,9 @@
         .status-badge.pending { background: #fff3e0; color: #ef6c00; }
         
         /* ⏰ ৩০ সেকেন্ডের লাইভ কাউন্টডাউন টাইমার */
-        .timer-banner { background-color: #fff3e0; color: #B80003; padding: 8px; border-radius: 4px; text-align: center; font-size: 13px; font-weight: bold; margin-bottom: 15px; border: 1px dashed #ffe0b2; }
+        .timer-banner { background-color: #AB0F0F; color: #388C19; padding: 8px; border-radius: 4px; text-align: center; font-size: 15px; font-weight: bold; margin-bottom: 15px; border: 1px dashed #ffe0b2; }
 
-        .btn-download { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background-color: #008709; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px; margin-top: 15px; text-decoration: none; text-align: center; box-sizing: border-box; }
+        .btn-download { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background-color: #257329; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-top: 15px; text-decoration: none; text-align: center; box-sizing: border-box; }
         .btn-download:hover { background-color: #1b5e20; }
         
         /* 💬 প্রিমিয়াম সাপোর্ট ইনফো বাটন */
@@ -84,12 +84,12 @@
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob">
         </div>
-        <button class="btn-submit" onclick="startVerification()">Submit Verification</button>
+        <button class="btn-submit" onclick="startVerification()">Continue</button>
     </div>
 
     <div id="loaderArea" class="loader-box">
-        <div class="spinner"></div> Once your verification status has been checked, please Waiting...</p>
-        <span style="font-size: 15px; color: gray;">Please wait up to 5 Seconds</span>
+        <div class="spinner"></div>It May take up to, (5) Seconds to Process your Application...</p>
+        <span style="font-size: 15px; color: gray;">Please see the 'Processing Time' section.</span>
     </div>
 
     <div id="resultArea" class="results-box" style="display:none;">
@@ -112,13 +112,11 @@
         </div>
         
         <a id="pdfDownloadLink" href="#" target="_blank" class="btn-download" style="display: none;">
-            <i class="fa-solid fa-file-pdf"></i> Download Document (PDF)
+            <i class="fa-solid fa-file-pdf"></i> Download (document)
         </a>
         <p>Review what happens after you apply to work in Canada. If we approve you for temporary residence in Canada, you will receive a permit visa. Here are the documents you will need.</p>
-        <button onclick="closeVevo()" style="width:100%; padding: 10px; margin-top: 15px; cursor: pointer; border: 1px solid #ccc; background: #fff; font-weight: bold; border-radius: 4px;">Close IRCC Portal</button>
     </div>
-
-    <div class="support-container">
+        <button onclick="closeVevo()" style="width:100%; padding: 10px; margin-top: 15px; cursor: pointer; border: 1px solid #ccc; background: #fff; font-weight: bold; border-radius: 4px;">Exit</button>
     </div>
     </div>
 </div>
